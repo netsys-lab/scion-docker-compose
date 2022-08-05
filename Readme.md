@@ -6,14 +6,14 @@ At first, you need to build all containers, so run `./build-containers.sh`. This
 
 To generate a topology, use the `topogen` container the following way:
 
-`mkdir gen`
-`docker run -v $(pwd)/sample.topo:/share/topology.json -v $(pwd)/gen:/share/output topogen`
+- `mkdir gen`
+- `docker run -v $(pwd)/sample.topo:/share/topology.json -v $(pwd)/gen:/share/output topogen`
 
 **Note:** Just change sample.topo with any topology you want to use. But do not change the second docker volume, this needs to be always `gen`.
 
 Inside `gen` you now have the complete SCION topology including a `docker-compose.yml` file. You can run the topology with:
-`cd gen`
-`docker-compose up -d`
+- `cd gen`
+- `docker-compose up -d`
 
 To ensure all containers are running use `docker ps` the output should look similar to this:
 ```
