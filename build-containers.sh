@@ -14,10 +14,10 @@ docker build -t daemon .
 echo "Built daemon."
 cd ..
 
-echo "Building router..."
+echo "Building posix-router..."
 cd router
-docker build -t router .
-echo "Built router."
+docker build -t posix-router .
+echo "Built posix-router."
 cd ..
 
 
