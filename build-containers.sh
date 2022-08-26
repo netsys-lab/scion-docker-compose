@@ -32,6 +32,12 @@ docker build -t netsys-lab/scion-coredns .
 echo "Built netsys-lab/scion-coredns."
 cd ..
 
+echo "Building netsys-lab/scion-sdns..."
+cd scion-sdns
+docker build -t netsys-lab/scion-sdns .
+echo "Built netsys-lab/scion-sdns."
+cd ..
+
 echo "Building netsys-lab/topogen..."
 cd topogen
 docker build -t netsys-lab/topogen .
