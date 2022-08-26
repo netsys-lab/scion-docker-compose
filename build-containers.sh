@@ -8,27 +8,32 @@ docker build -t netsys-lab/scion-base .
 echo "Built netsys-lab/scion-base."
 cd ..
 
-echo "Building control..."
+echo "Building netsys-lab/scion-control..."
 cd control
-docker build -t control .
-echo "Built control."
+docker build -t netsys-lab/scion-control .
+echo "Built netsys-lab/scion-control."
 cd ..
 
-echo "Building daemon..."
+echo "Building netsys-lab/scion-daemon..."
 cd daemon
-docker build -t daemon .
-echo "Built daemon."
+docker build -t netsys-lab/scion-daemon .
+echo "Built netsys-lab/scion-daemon."
 cd ..
 
-echo "Building posix-router..."
+echo "Building netsys-lab/scion-router..."
 cd router
-docker build -t posix-router .
-echo "Built posix-router."
+docker build -t netsys-lab/scion-router .
+echo "Built netsys-lab/scion-router."
 cd ..
 
+echo "Building netsys-lab/scion-coredns..."
+cd scion-coredns
+docker build -t netsys-lab/scion-coredns .
+echo "Built netsys-lab/scion-coredns."
+cd ..
 
-echo "Building topogen..."
+echo "Building netsys-lab/topogen..."
 cd topogen
-docker build -t topogen .
-echo "Built topogen."
+docker build -t netsys-lab/topogen .
+echo "Built netsys-lab/topogen."
 cd ..
