@@ -9,8 +9,7 @@ RUN cd scion && go build -o ./bin/ ./scion/cmd/scion && cp ./bin/scion /usr/bin/
 RUN cd scion && go build -o ./bin/ ./scion-pki/cmd/scion-pki && cp ./bin/scion-pki /usr/bin/scion-pki && echo "Built scion-pki"
 RUN cd scion && go build -o ./bin/ ./router/cmd/router && cp ./bin/router /root/router && echo "Built router"
 RUN git clone https://github.com/netsys-lab/scion-sdns
-RUN cd scion-sdns && git checkout 1268b51bceddcf03e288ebb8bd80628203bf6e10
-RUN cd scion-sdns && go build -v . && cp ./sdns /root/scion-sdns && echo "Built scion-sdns@1268b51bceddcf03e288ebb8bd80628203bf6e10"
+RUN cd scion-sdns && go build -v . && cp ./sdns /root/scion-sdns && echo "Built scion-sdns"
 RUN git clone -b rhine https://github.com/netsys-lab/scion-coredns
 RUN cd scion-coredns && go build -v . && cp ./coredns /root/scion-coredns && echo "Built scion-coredns"
 RUN git clone https://github.com/netsys-lab/scion-rdig

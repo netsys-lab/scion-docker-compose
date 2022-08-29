@@ -4,7 +4,7 @@ echo "Building local containers for docker-compose setup"
 
 echo "Building netsys-lab/scion-base..."
 cd scion-base
-docker build -t netsys-lab/scion-base .
+docker build -t --no-cache true netsys-lab/scion-base .
 echo "Built netsys-lab/scion-base."
 cd ..
 
