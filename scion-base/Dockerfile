@@ -1,5 +1,5 @@
 FROM golang:1.17-alpine
-RUN apk add --no-cache bash git build-base
+RUN apk add --no-cache bash git build-base bind-tools
 WORKDIR /root/go/src
 RUN git clone https://github.com/scionproto/scion
 RUN cd scion && go build -o ./bin/ ./control/cmd/control && cp ./bin/control /root/control && echo "Built control"
