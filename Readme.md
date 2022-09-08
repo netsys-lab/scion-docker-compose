@@ -1,5 +1,5 @@
 # SCION Docker-Compose Scripts
-This repo contains tooling to use an adapted version of SCION's topogen to generate working docker-compose topologies. It contains one Dockerfile for a `topogen` container that you can run to generate the topology (so no need to fork my scion branch) and containers for the SCION `control` `router` and `daemon`.
+This repo contains tooling to use an adapted version of SCION's topogen to generate working docker-compose topologies. It contains one Dockerfile for a `netsys-lab/topogen` container that you can run to generate the topology (so no need to fork my scion branch) and containers for the SCION `control-service` `broder router` and `daemon`.
 
 ## Get Started
 At first, you need to build all containers, so run `./build-containers.sh`. This may take a few minutes.
