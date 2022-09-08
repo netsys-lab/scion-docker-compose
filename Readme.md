@@ -4,10 +4,10 @@ This repo contains tooling to use an adapted version of SCION's topogen to gener
 ## Get Started
 At first, you need to build all containers, so run `./build-containers.sh`. This may take a few minutes.
 
-To generate a topology, use the `topogen` container the following way:
+To generate a topology, use the `netsys-lab/topogen` container the following way:
 
 - `mkdir gen`
-- `docker run -v $(pwd)/sample.topo:/share/topology.json -v $(pwd)/gen:/share/output topogen`
+- `docker run -v $(pwd)/sample.topo:/share/topology.json -v $(pwd)/gen:/share/output netsys-lab/topogen`
 
 **Note:** Just change sample.topo with any topology you want to use. But do not change the second docker volume, this needs to be always `gen`.
 
